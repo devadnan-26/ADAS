@@ -22,6 +22,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeContentPadding
 import androidx.compose.foundation.layout.size
+import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.material.Icon
@@ -72,7 +73,6 @@ class Dashboard : Screen {
         MaterialTheme {
             // Variable definitions START
             val navigator = LocalNavigator.currentOrThrow
-
             var showContent by remember { mutableStateOf(false) }
             var time by remember { mutableStateOf(getCurrentTime()) }
             var animation by remember { mutableStateOf("") }
@@ -90,7 +90,7 @@ class Dashboard : Screen {
 
             // Suspend functions block START
             LaunchedEffect(Unit) {
-                animation = Res.readBytes("files/road-right.json").decodeToString()
+                animation = Res.readBytes("files/road.json").decodeToString()
             }
 
             LaunchedEffect(Unit) {

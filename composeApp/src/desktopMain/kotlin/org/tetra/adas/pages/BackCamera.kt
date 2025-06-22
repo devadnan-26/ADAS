@@ -59,11 +59,11 @@ class BackCamera : Screen {
             Canvas(modifier = Modifier.fillMaxSize()) {
                 safetyLines()
             }
-            Button(onClick = {
-                navigator.push(Dashboard())
-            }, modifier = Modifier.align(Alignment.BottomCenter).padding(16.dp), colors = ButtonDefaults.buttonColors(backgroundColor = Color.Black), border = BorderStroke(3.dp, Color.White)) {
-                Text("Back")
-            }
+//            Button(onClick = {
+//                navigator.push(Dashboard())
+//            }, modifier = Modifier.align(Alignment.BottomCenter).padding(16.dp), colors = ButtonDefaults.buttonColors(backgroundColor = Color.Black), border = BorderStroke(3.dp, Color.White)) {
+//                Text("Back")
+//            }
         }
     }
 
