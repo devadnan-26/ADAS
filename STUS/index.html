@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Webcam Stream</title></head>
+<body>
+    <h2>Live Stream</h2>
+    <img id="video" width="640" />
+    <script>
+        const ws = new WebSocket("ws://127.1.1.150:8080/back-camera");
+
+        ws.onmessage = (event) => {
+            document.getElementById("video").src = "data:image/jpeg;base64," + event.data;
+        };
+    </script>
+</body>
+</html>
